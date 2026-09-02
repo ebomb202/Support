@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Song Discovery — Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --bg: #ffffff;
+      --card: #f5f5f7;
+      --accent: #fa243c;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #f5f5f7;
+        --muted: #a1a1a6;
+        --bg: #000000;
+        --card: #1c1c1e;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin: 32px 0 12px;
+    }
+    p, li { margin: 0 0 12px; }
+    ul { padding-left: 1.25rem; }
+    a { color: var(--accent); }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Song Discovery Privacy Policy</h1>
+    <p class="meta">Effective date: August 21, 2026</p>
+
+    <p>
+      Song Discovery (“the App”) helps you discover music by searching songs, exploring vibes,
+      identifying songs playing nearby, listening to short previews, and opening tracks in Apple Music or Spotify.
+      This policy explains what information the App uses and how it is handled.
+    </p>
+
+    <div class="card">
+      <strong>Summary:</strong> Song Discovery does not require an account and does not sell your data.
+      Search queries you enter are sent over the internet to music catalog services so the App can show results.
+      The free version may show ads through Google AdMob on discovery screens.
+      You can remove ads with a one-time in-app purchase.
+    </div>
+
+    <h2>Information We Collect</h2>
+    <p>The App is designed to collect as little information as possible.</p>
+    <ul>
+      <li><strong>Search text you type</strong> — such as song titles, artist names, or vibe descriptions — is sent to external music services to retrieve search results and recommendations.</li>
+      <li><strong>Song metadata for recommendations</strong> — title, artist, genre, and related catalog fields may be sent to Last.fm and (if configured) Google Gemini so the App can suggest similar tracks by listening data and feel.</li>
+      <li><strong>Microphone audio (optional)</strong> — only when you tap Identify. Short ambient audio is processed on-device / via Apple’s ShazamKit to match a song. The App does not keep microphone recordings.</li>
+      <li><strong>Technical data needed for network requests</strong> — such as your IP address — may be processed by those third-party services when your device contacts them. The App does not store this information on its own servers because the App has no backend servers.</li>
+      <li><strong>Cached media</strong> — album artwork and audio preview files may be temporarily cached on your device by the App or iOS to improve performance.</li>
+    </ul>
+    <p>The App does <strong>not</strong> collect:</p>
+    <ul>
+      <li>Name, email address, or contact information</li>
+      <li>Precise location</li>
+      <li>Contacts, photos, or camera data</li>
+      <li>Persistent microphone recordings (audio is used only for live identification)</li>
+      <li>Health, financial, or government ID information</li>
+    </ul>
+    <p>When ads are enabled, Google AdMob may collect device and advertising-related data (such as IP address and ad interaction) according to <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>. You can limit ad tracking in iOS Settings → Privacy &amp; Security → Tracking.</p>
+
+    <h2>How the App Uses Information</h2>
+    <p>Information is used only to operate the App, including:</p>
+    <ul>
+      <li>Searching for songs and artists</li>
+      <li>Identifying songs playing nearby (when you choose Identify)</li>
+      <li>Generating similar-song and vibe-based recommendations</li>
+      <li>Loading album artwork and playing 30-second song previews when available</li>
+      <li>Opening selected songs in Apple Music or Spotify</li>
+      <li>Creating playlists in Apple Music or Spotify when you choose Export</li>
+    </ul>
+
+    <h2>Third-Party Services</h2>
+    <p>The App communicates with third-party services to provide its features, including:</p>
+    <ul>
+      <li><strong>Apple iTunes Search API</strong> — song search, metadata, artwork, and preview URLs</li>
+      <li><strong>Deezer API</strong> — related-artist data used for recommendations</li>
+      <li><strong>Last.fm API</strong> — listener-based similar tracks, artists, and tagged top tracks used for recommendations</li>
+      <li><strong>Google Gemini API</strong> — optional; used only to infer mood/feel and re-rank recommendation candidates when you add an API key</li>
+      <li><strong>Apple Music / Media Library</strong> — when you open songs or export a playlist to Apple Music</li>
+      <li><strong>ShazamKit</strong> — when you use Identify to match ambient audio to a song</li>
+      <li><strong>Spotify Accounts &amp; Web API</strong> — when you sign in and export a playlist to Spotify</li>
+      <li><strong>Google AdMob</strong> — banner and occasional full-screen ads on discovery tabs; may use device/ad identifiers for ad delivery and measurement</li>
+    </ul>
+    <p>
+      These services are operated by third parties and have their own privacy policies.
+      We do not control how they process data. Please review Apple’s, Deezer’s, Last.fm’s, Spotify’s, and (if used) Google’s privacy policies
+      for more information.
+    </p>
+    <p>
+      If you connect Spotify, the App stores Spotify access and refresh tokens on your device only so it can
+      create playlists on your behalf. You can sign out in Settings at any time.
+    </p>
+
+    <h2>Data Storage and Retention</h2>
+    <p>
+      The App stores some data locally on your device only, such as cached artwork, playlists you create,
+      streaming preferences, and (if you connect Spotify) Spotify tokens needed for playlist export.
+      This local data is not transmitted to the developer.
+      You can remove the App from your device to delete locally stored App data.
+    </p>
+
+    <h2>Children’s Privacy</h2>
+    <p>
+      The App is not directed to children under 13, and we do not knowingly collect personal
+      information from children.
+    </p>
+
+    <h2>Your Choices</h2>
+    <ul>
+      <li>You choose what to search for in the App.</li>
+      <li>Song identification is optional and uses the microphone only when you tap Identify. You can deny or revoke microphone access in iOS Settings.</li>
+      <li>Opening Apple Music or Spotify is optional and happens only when you choose to.</li>
+      <li>Connecting Spotify for playlist export is optional; you can sign out in Settings.</li>
+      <li>You can turn off ads in Settings → Support the App (for your device only).</li>
+      <li>You can stop using the App or delete it at any time.</li>
+    </ul>
+
+    <h2>Security</h2>
+    <p>
+      Network communication uses standard HTTPS where supported by the services the App contacts.
+      No method of transmission or storage is completely secure, but the App is designed to minimize
+      the amount of data involved.
+    </p>
+
+    <h2>Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. The “Effective date” at the top of this
+      page will be revised when changes are made. Continued use of the App after an update means you
+      accept the revised policy.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      If you have questions about this Privacy Policy or Song Discovery, contact
+      <strong>spork202@gmail.com</strong>
+      or use
+      <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=spork202@gmail.com&amp;su=Song%20Discovery%20Privacy">Gmail</a>.
+    </p>
+  </main>
+</body>
+</html>
