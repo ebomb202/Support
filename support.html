@@ -56,15 +56,44 @@
       padding: 16px 18px;
       margin: 20px 0;
     }
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
     .contact-button {
       display: inline-block;
-      margin-top: 8px;
       padding: 10px 16px;
       border-radius: 10px;
       background: var(--accent);
-      color: #fff;
+      color: #fff !important;
       text-decoration: none;
       font-weight: 600;
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+    }
+    .contact-button.secondary {
+      background: transparent;
+      color: var(--accent) !important;
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 55%, transparent);
+    }
+    .email-box {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: var(--bg);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 1rem;
+      user-select: all;
+      -webkit-user-select: all;
+    }
+    .copy-status {
+      min-height: 1.25rem;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
     }
     .footer-links {
       margin-top: 40px;
@@ -89,7 +118,13 @@
       <p>
         If something isn’t working, check the FAQs below or email us — we usually reply within a few business days.
       </p>
-      <a class="contact-button" href="mailto:spork202@gmail.com?subject=Song%20Discovery%20Support">Email Support</a>
+      <div class="email-box" id="support-email">spork202@gmail.com</div>
+      <div class="contact-actions">
+        <a class="contact-button" href="mailto:spork202@gmail.com?subject=Song%20Discovery%20Support">Open in Mail</a>
+        <a class="contact-button secondary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=spork202@gmail.com&amp;su=Song%20Discovery%20Support" target="_blank" rel="noopener noreferrer">Open in Gmail</a>
+        <button type="button" class="contact-button secondary" id="copy-email">Copy email</button>
+      </div>
+      <p class="copy-status" id="copy-status" aria-live="polite"></p>
     </div>
 
     <h2>Frequently Asked Questions</h2>
@@ -132,9 +167,12 @@
     <p>
       For bugs, feature requests, purchase issues, or anything else:
     </p>
-    <p>
-      <a href="mailto:spork202@gmail.com">spork202@gmail.com</a>
-    </p>
+    <div class="email-box">spork202@gmail.com</div>
+    <div class="contact-actions">
+      <a class="contact-button" href="mailto:spork202@gmail.com?subject=Song%20Discovery%20Support">Open in Mail</a>
+      <a class="contact-button secondary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=spork202@gmail.com&amp;su=Song%20Discovery%20Support" target="_blank" rel="noopener noreferrer">Open in Gmail</a>
+      <button type="button" class="contact-button secondary" data-copy-email>Copy email</button>
+    </div>
     <p>
       Please include your iOS version, app version, and a short description of what happened.
       Screenshots help us fix issues faster.
@@ -144,5 +182,49 @@
       <a href="privacy-policy.html">Privacy Policy</a>
     </p>
   </main>
+  <script>
+    (function () {
+      var email = "spork202@gmail.com";
+      var status = document.getElementById("copy-status");
+
+      function showStatus(message) {
+        if (status) status.textContent = message;
+      }
+
+      function copyEmail() {
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(email).then(function () {
+            showStatus("Email copied to clipboard.");
+          }).catch(fallbackCopy);
+          return;
+        }
+        fallbackCopy();
+      }
+
+      function fallbackCopy() {
+        var input = document.createElement("textarea");
+        input.value = email;
+        input.setAttribute("readonly", "");
+        input.style.position = "fixed";
+        input.style.left = "-9999px";
+        document.body.appendChild(input);
+        input.select();
+        try {
+          document.execCommand("copy");
+          showStatus("Email copied to clipboard.");
+        } catch (error) {
+          showStatus("Copy failed. Long-press the address above to copy it.");
+        }
+        document.body.removeChild(input);
+      }
+
+      var copyButton = document.getElementById("copy-email");
+      if (copyButton) copyButton.addEventListener("click", copyEmail);
+
+      document.querySelectorAll("[data-copy-email]").forEach(function (button) {
+        button.addEventListener("click", copyEmail);
+      });
+    })();
+  </script>
 </body>
 </html>
