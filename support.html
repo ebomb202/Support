@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Song Discovery — Support</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --bg: #ffffff;
+      --card: #f5f5f7;
+      --accent: #fa243c;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #f5f5f7;
+        --muted: #a1a1a6;
+        --bg: #000000;
+        --card: #1c1c1e;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin: 32px 0 12px;
+    }
+    p, li { margin: 0 0 12px; }
+    ul { padding-left: 1.25rem; }
+    a { color: var(--accent); }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 20px 0;
+    }
+    .contact-button {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .footer-links {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--card);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Song Discovery Support</h1>
+    <p class="meta">Help, FAQs, and contact information</p>
+
+    <div class="card">
+      <strong>Need help?</strong>
+      <p>
+        Song Discovery helps you search songs, explore vibes, identify music with Shazam,
+        discover similar tracks, and export playlists to Apple Music or Spotify.
+      </p>
+      <p>
+        If something isn’t working, check the FAQs below or email us — we usually reply within a few business days.
+      </p>
+      <a class="contact-button" href="mailto:spork202@gmail.com?subject=Song%20Discovery%20Support">Email Support</a>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h2>Search &amp; discovery</h2>
+    <ul>
+      <li><strong>Song search isn’t returning results</strong> — Check your internet connection and try a simpler query (song title or artist). Some obscure tracks may not appear in the catalog.</li>
+      <li><strong>Similar songs feel off</strong> — Recommendations use iTunes, Deezer, Last.fm, and optional AI feel matching. Results vary by how much catalog data exists for that artist.</li>
+      <li><strong>Identify (Shazam) isn’t working</strong> — Allow microphone access in iOS Settings → Song Discovery → Microphone, then try again in a quieter environment.</li>
+    </ul>
+
+    <h2>Apple Music &amp; Spotify</h2>
+    <ul>
+      <li><strong>Open in Apple Music doesn’t work</strong> — Make sure Apple Music is installed and you’re signed in with an Apple ID.</li>
+      <li><strong>Spotify export</strong> — Sign in under Settings → Spotify Playlist Export. In the Spotify Developer Dashboard, your redirect URI must be <code>songdiscovery://spotify-callback</code>.</li>
+      <li><strong>Change default music app</strong> — Go to Settings → Open Songs In and pick Apple Music or Spotify.</li>
+    </ul>
+
+    <h2>Ads &amp; Remove Ads purchase</h2>
+    <ul>
+      <li><strong>Remove Ads</strong> — One-time purchase in Settings → Support the App. It removes banner and full-screen ads on all discovery tabs.</li>
+      <li><strong>Restore purchase</strong> — Tap Restore Purchases in Settings using the same Apple ID you bought with.</li>
+      <li><strong>Tracking permission</strong> — iOS may ask if ads can track you across apps. You can decline and still use Song Discovery; ads may be less personalized.</li>
+    </ul>
+
+    <h2>Playlists &amp; previews</h2>
+    <ul>
+      <li><strong>30-second previews</strong> — Not every track has a preview available in the catalog.</li>
+      <li><strong>Playlists</strong> — Playlists are saved on your device. Deleting the app removes locally stored playlists.</li>
+    </ul>
+
+    <h2>Privacy</h2>
+    <p>
+      Song Discovery does not require an account. Search text is sent to music services to fetch results.
+      Optional ads are served by Google AdMob. Read our
+      <a href="privacy-policy.html">Privacy Policy</a> for full details.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      For bugs, feature requests, purchase issues, or anything else:
+    </p>
+    <p>
+      <a href="mailto:spork202@gmail.com">spork202@gmail.com</a>
+    </p>
+    <p>
+      Please include your iOS version, app version, and a short description of what happened.
+      Screenshots help us fix issues faster.
+    </p>
+
+    <p class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </p>
+  </main>
+</body>
+</html>
